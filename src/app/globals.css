@@ -20,15 +20,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* לא לאפשר גלילה אופקית */
+  overflow-x: hidden;
 }
 
+/* כותרת האנימציה */
 h2 {
   font-size: 2.5rem; /* גודל טקסט עבור מסכים גדולים */
-  white-space: nowrap;
+  white-space: nowrap; /* לא לחתוך שורות */
   overflow: hidden;
   text-overflow: ellipsis;
-  animation: typing 4s steps(40) 1s forwards, delete 4s steps(40) 6s forwards;
+  display: inline-block; /* לוודא שהטקסט לא יעבור לשורה חדשה */
+  max-width: 100%; /* לא להגביל את הרוחב */
 }
 
 /* אנימציה של כתיבה */
@@ -41,7 +43,7 @@ h2 {
   }
 }
 
-/* אנימציה של מחיקה */
+/* אנימציה של מחיקה - כאן לא נשתמש במקרים של יצירת קשר ומחירים */
 @keyframes delete {
   0% {
     width: 100%;
@@ -54,14 +56,19 @@ h2 {
 /* Media Queries עבור רספונסיביות */
 @media (max-width: 768px) {
   h2 {
-    font-size: 1.8rem; /* גודל טקסט קטן יותר למסכים קטנים */
-    animation-duration: 3s; /* זמן האנימציה יותר קצר עבור מסכים קטנים */
+    font-size: 1.8rem;
+    animation-duration: 3s;
   }
 }
 
 @media (max-width: 480px) {
   h2 {
-    font-size: 1.5rem; /* עוד יותר קטן עבור מכשירים עם מסך קטן */
-    animation-duration: 2s; /* קיצור האנימציה */
+    font-size: 1.5rem;
+    animation-duration: 2s;
   }
+}
+
+/* אלמנטים שלא צריכים למחוק את הטקסט שלהם */
+.fixed-content {
+  animation: none; /* לא להחיל עליהם אנימציה */
 }

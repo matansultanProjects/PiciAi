@@ -45,7 +45,7 @@ export default function A() {
   return (
     <div className="min-h-screen bg-gray-100">
       <Head>
-        <title>PICI AI  - Demo</title>
+        <title>PICI AI - Demo</title>
         <meta
           name="description"
           content="Your smart and secure photo management solution powered by AI."
@@ -56,7 +56,7 @@ export default function A() {
       <header className="bg-white shadow-lg py-4 sticky top-0 z-10">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-3xl font-bold text-blue-600 transition-all duration-300 ease-in-out transform hover:scale-110">
-          PICI AI 
+            PICI AI
           </h1>
           <nav>
             <ul className="flex space-x-6">
@@ -92,10 +92,12 @@ export default function A() {
       {/* Main Section */}
       <main className="container mx-auto px-6 py-12">
         <section className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4 typing-animation sm:text-3xl md:text-2xl">
-  {text}
-</h2>
-
+          <h2
+            className="text-4xl font-bold text-gray-800 mb-4 typing-animation"
+            style={{ whiteSpace: "nowrap", overflow: "hidden" }}
+          >
+            {text}
+          </h2>
         </section>
 
         {/* Features Section */}
@@ -115,7 +117,7 @@ export default function A() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="text-center mb-12">
+        <section id="pricing" className="text-center mb-12 fixed-content">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Pricing Plans</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded shadow p-6">
@@ -137,7 +139,7 @@ export default function A() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="text-center mb-12">
+        <section id="contact" className="text-center mb-12 fixed-content">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Contact Us</h2>
           <p className="text-gray-600">Have questions? Reach out to us!</p>
           <form className="mt-6">
