@@ -94,7 +94,11 @@ export default function A() {
         <section className="text-center mb-16">
           <h2
             className="text-4xl font-bold text-gray-800 mb-4 typing-animation"
-            style={{ whiteSpace: "nowrap", overflow: "hidden" }}
+            style={{
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              display: "inline-block",
+            }}
           >
             {text}
           </h2>
