@@ -92,16 +92,10 @@ export default function A() {
       {/* Main Section */}
       <main className="container mx-auto px-6 py-12">
         <section className="text-center mb-16">
-          <h2
-            className="text-4xl font-bold text-gray-800 mb-4 typing-animation"
-            style={{
-              whiteSpace: "nowrap",
-              overflow: "hidden",
-              display: "inline-block",
-            }}
-          >
-            {text}
-          </h2>
+        <h2 className="text-4xl font-bold text-gray-800 mb-4 typing-animation sm:text-3xl md:text-2xl">
+  {text}
+</h2>
+
         </section>
 
         {/* Features Section */}
